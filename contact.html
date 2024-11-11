@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>聯絡我 - 我的作品集</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            flex-grow: 1;
+        }
+
+        footer {
+            margin-top: auto;
+        }
+
+        /* 調整按鈕的樣式 */
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* 聯絡回應訊息的樣式 */
+        #responseMessage {
+            display: none;
+            padding: 10px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #responseMessage.success {
+            background-color: #28a745;
+        }
+
+        #responseMessage.error {
+            background-color: #dc3545;
+        }
+
+        /* 為「其他聯絡方式」區塊添加背景色與內距 */
+        .contact-info-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background-color: #343a40;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">我的作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">首頁</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html#portfolio">作品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">關於我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="contact.html">聯繫我</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">聯繫我</h2>
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">姓名</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">電子郵件</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">訊息</label>
+                <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">發送訊息</button>
+        </form>
+        <div id="responseMessage" class="mt-3"></div>
+    </section>
+
+    <section class="container my-5 contact-info-section">
+        <h3 class="text-center mb-4">其他聯絡方式</h3>
+        <p class="text-center">你也可以透過以下方式聯繫我：</p>
+        <ul class="list-group">
+            <li class="list-group-item">電話：<a href="tel:+123456789">+123456789</a></li>
+            <li class="list-group-item">電子郵件：<a href="mailto:youremail@example.com">youremail@example.com</a></li>
+            <li class="list-group-item">社交媒體：
+                <a href="https://facebook.com" target="_blank" class="me-2">Facebook</a>
+                <a href="https://instagram.com" target="_blank" class="me-2">Instagram</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="text-center py-4" style="background-color: #343a40; color: white;">
+        <p>© 2024 我的作品集. 保留所有權利.</p>
+        <div>
+            <a href="https://facebook.com" class="me-3 text-decoration-none text-white" target="_blank">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://line.me" class="me-3 text-decoration-none text-white" target="_blank">
+                <i class="fab fa-line fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" class="text-decoration-none text-white" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const responseMessage = document.getElementById('responseMessage');
+            responseMessage.style.display = 'block';
+            responseMessage.classList.add('success');
+            responseMessage.innerHTML = '謝謝你的訊息，我會儘快聯絡你！';
+
+            // 可根據需求設定失敗訊息
+            // responseMessage.classList.add('error');
+            // responseMessage.innerHTML = '提交失敗，請稍後再試。';
+        });
+    </script>
+</body>
+</html>

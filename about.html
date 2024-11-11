@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>關於我 - 我的作品集</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        section {
+            flex-grow: 1;
+        }
+        footer {
+            margin-top: auto;
+        }
+        .progress {
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #343a40;">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">我的作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="切換導航">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">首頁</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html#portfolio">作品</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" href="about.html">關於我</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="contact.html">聯繫我</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">關於我</h2>
+        <img src="low.png" alt="我的照片" class="img-fluid rounded-circle mx-auto d-block" style="max-width: 150px;">
+        
+        <p class="text-center mt-3"><strong>您好！我是劉羿群，國立虎尾科技大學的學生。</strong></p>
+        
+        <div class="text-center mb-5">
+            <p>從小我就對網頁的創建過程充滿好奇，並不斷探索如何讓網站更美觀、更高效。這份熱情讓我進入了網頁開發的世界，並持續學習最新的技術。(假的)</p>
+        </div>
+        
+        <h3 class="mt-4">技能與專長</h3>
+        <div class="mb-3">
+            <label>HTML, CSS, JavaScript</label>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>React, Node.js</label>
+            <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>Python, R (數據分析)</label>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label>語言能力：英文、中文</label>
+            <div class="progress">
+                <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        
+        
+        <h3 class="mt-4">未來目標</h3>
+        <p>我希望能成為一名專業的網頁開發工程師，運用創新技術來解決真實世界的問題，並持續創造出具影響力的網頁應用程式。(假的)</p>
+        
+        <h3 class="mt-4">個人生活與興趣</h3>
+        <p>工作之餘，我熱愛戶外活動和攝影，特別喜歡探索自然風景，這也幫助我在設計中找到新的靈感。(假的)</p>
+        
+        <h3 class="mt-4">下載我的簡歷</h3>
+        <p class="text-center"><a href="example.txt" class="btn btn-outline-primary" target="_blank">下載簡歷</a></p>
+        
+        <h3 class="mt-4">聯繫我</h3>
+        <p>如果您對我的作品或背景感興趣，請隨時聯繫我！</p>
+    </section>
+
+    <footer class="text-center py-4" style="background-color: #343a40; color: white;">
+        <p>© 2024 我的作品集. 保留所有權利.</p>
+        <div>
+            <a href="https://facebook.com" class="me-3 text-decoration-none text-white" target="_blank">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://line.me" class="me-3 text-decoration-none text-white" target="_blank">
+                <i class="fab fa-line fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" class="text-decoration-none text-white" target="_blank">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
